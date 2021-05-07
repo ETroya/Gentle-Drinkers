@@ -1,0 +1,8 @@
+.firstRow {
+    display: flex;
+    background-color: blue;
+}
+.secondRow {
+    display: flex;
+    background-color: green ;
+}
