@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/NavBar/navbar";
+import Footer from "../components/Footer/footer";
 import "./style.css";
 
 const Main = () => {
@@ -45,6 +46,7 @@ const Main = () => {
         </div>
 
       </div>
+      <Footer />
     </div>
   );
 };
