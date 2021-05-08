@@ -1,8 +1,12 @@
-.firstRow {
-    display: flex;
-    background-color: blue;
+.main {
+    background-color: rgb(24, 26, 27);
+    color: white;
 }
-.secondRow {
-    display: flex;
-    background-color: green ;
+
+.randomCard {
+    margin-top: 5em;
+}
+
+.featuredCard {
+    margin-top: 5em;
 }
