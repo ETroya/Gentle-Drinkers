@@ -10,3 +10,11 @@
 .featuredCard {
     margin-top: 5em;
 }
+
+.questions{
+    text-align: center;
+    margin-top: 5em;
+    border: solid 2px black;
+    height: 12em;
+    padding: 60px 0;
+}

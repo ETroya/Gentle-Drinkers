@@ -1,11 +1,18 @@
-import React from "react"
-import Main from "./pages/Main"
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Main from "./pages/Main";
+import AddBeer from './pages/AddBeer';
 
 function App() {
   return (
-    <div>
-    <Main />
-    </div>
+    <Router>
+      <Route exact path={"/"}>
+        <Main />
+      </Route>
+      <Route exact path={'/addbeer'}>
+        <AddBeer/>
+      </Route>
+    </Router>
   );
 }
 
