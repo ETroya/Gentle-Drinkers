@@ -2,8 +2,9 @@ import React from "react";
 import Navbar from "../components/NavBar/navbar";
 import Footer from "../components/Footer/footer";
 import "./style.css";
-import RandomBeer from "../components/randomBeer/RandomBeer";
+import RandomBeer from "../components/RandomBeer/RandomBeer";
 import FeaturedBeer from "../components/featuredBeer/FeaturedBeer";
+import Beerlist from "../components/Beerlist/list";
 
 const Main = () => {
   return (
@@ -18,6 +19,8 @@ const Main = () => {
       <div className="randomCard">
         <RandomBeer />
       </div>
+        <Beerlist />
+      <h1>Beerlist</h1>
       <Footer />
     </div>
   );
