@@ -30,6 +30,14 @@ mongoose.connect(
     useFindAndModify: false,
   }
 );
+    process.env.MONGODB_URI || "mongodb://localhost/drinkersList",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    }
+  );
 
 mongoose.connection.on("connected", () => {
   console.log("connected to mongoose");

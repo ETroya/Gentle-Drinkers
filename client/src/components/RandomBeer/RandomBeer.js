@@ -1,5 +1,6 @@
 import React from "react";
 import "./RandomBeer.css";
+
 const RandomBeer = () => {
   return (
     <div className="row randomImage">
