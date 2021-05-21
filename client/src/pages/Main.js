@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "../components/Footer/footer"
+import Footer from "../components/Footer/footer";
 import "./style.css";
-import RandomBeer from "../components/RandomBeer/RandomBeer";
+import RandomBeer from "../components/randomBeer/RandomBeer";
 import FeaturedBeer from "../components/featuredBeer/FeaturedBeer";
 import Header from "../components/NavBar/navbar";
 
