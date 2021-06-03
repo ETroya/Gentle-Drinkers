@@ -22,7 +22,14 @@ app.use(express.json());
 // app.use(routes);
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/adminEmployee",
+  // process.env.MONGODB_URI || "mongodb://localhost/adminEmployee",
+  // {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,
+  //   useCreateIndex: true,
+  //   useFindAndModify: false,
+  // }
+  process.env.MONGODB_URI || "mongodb://localhost/drinkersList",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -30,14 +37,6 @@ mongoose.connect(
     useFindAndModify: false,
   }
 );
-    process.env.MONGODB_URI || "mongodb://localhost/drinkersList",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
-    }
-  );
 
 mongoose.connection.on("connected", () => {
   console.log("connected to mongoose");

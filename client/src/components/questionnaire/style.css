@@ -1,0 +1,32 @@
+.sliders {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 5px;
+  border-radius: 5px;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: goldenrod; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+}
