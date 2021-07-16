@@ -1,4 +1,50 @@
-.pasteArea {
-    border:solid 2px white;
-    height: 200px;
+.newBeerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 3em; */
+  /* margin: 5em; */
+}
+
+.addBeer {
+  /* padding: 2em; */
+  width: 80%;
+  margin-top: 3em;
+  border-radius: 20px;
+}
+
+.imageInput {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.fileInput {
+  display: none;
+}
+
+.imageDiv {
+  height: 303px;
+  width: 202px;
+  border: 1px dashed white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+}
+
+.sideBar {
+  background-color: greenyellow;
+}
+
+.uploadedImage {
+  width: 200px;
+  height: 300px;
 }

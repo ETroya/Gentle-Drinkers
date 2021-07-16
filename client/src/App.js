@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoutes/PrivateRoutes";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
+import AddBeer from "./pages/AddBeer";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <Router>
         <div>
           <PrivateRoute exact path={"/"} component={Main} />
+          <Route exact path={"/addbeer"}>
+            <AddBeer />
+          </Route>
           <PrivateRoute
             exact
             path={"/updateprofile"}
