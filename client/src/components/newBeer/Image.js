@@ -1,10 +1,10 @@
-import React from 'react'
-
-const Image = ({images, removeImages}) => {
-    console.log(images);
-    return (
-        <div>
-            {/* {images.map((image, i) => {
+import React from "react";
+import "./NewBeer.css";
+const Image = ({ images, removeImages }) => {
+  console.log(images);
+  return (
+    <div>
+      {/* {images.map((image, i) => {
                 console.log(image.name);
                 <div key={i} className='fadein'>
                     <div onClick={() => removeImages(image.lastModified)}
@@ -14,9 +14,9 @@ const Image = ({images, removeImages}) => {
                     <img src={image.name} alt=''/>
                     </div>
             })} */}
-            <img src={images[0].name} alt=''/>
-        </div>
-    )
-}
+      <img src={images[0].name} alt="" id="uploadedImage" />
+    </div>
+  );
+};
 
-export default Image
+export default Image;

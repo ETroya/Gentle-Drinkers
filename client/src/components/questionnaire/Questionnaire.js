@@ -11,6 +11,7 @@ const Questionnaire = () => {
   });
   const [error, setError] = useState();
 
+  //handles changes made to the find beer questionnaire
   const handleChange = (e) => {
     if (e.target.name !== "type") {
       setBeer({ ...beer, [e.target.name]: e.target.value });
@@ -31,6 +32,7 @@ const Questionnaire = () => {
     }
   };
 
+  //handle the submit of the questionnaire
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(beer);
