@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 // import axios from 'axios';
 import "./list.css";
 import api from "../../utils/api";
-import List from "../List";
+import List from "../List/index";
 
 function Beerlist() {
   const [filteredBeers, setFilterBeer] = useState([]);
