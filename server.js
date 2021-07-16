@@ -12,30 +12,37 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // We need to use sessions to keep track of our user's login status
-app.use(
-    session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-  );
-  app.use(passport.initialize());
-app.use(passport.session());
+// app.use(
+//     session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+//   );
+//   app.use(passport.initialize());
+// app.use(passport.session());
 
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/drinkersList",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
-    }
-  );
+  // process.env.MONGODB_URI || "mongodb://localhost/adminEmployee",
+  // {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,
+  //   useCreateIndex: true,
+  //   useFindAndModify: false,
+  // }
+  process.env.MONGODB_URI || "mongodb://localhost/drinkersList",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
+);
 
-  mongoose.connection.on("connected", () => {
-    console.log("connected to mongoose");
-  });
+mongoose.connection.on("connected", () => {
+  console.log("connected to mongoose");
+});
 
 // Start the API server
 app.listen(PORT, () => {
-    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-  });
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+});
