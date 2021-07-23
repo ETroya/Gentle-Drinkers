@@ -1,5 +1,5 @@
 import React from "react";
-import NewBeer from "../components/newBeer/NewBeer";
+import NewBeer from "../components/NewBeer/newBeer";
 
 const AddBeer = () => {
   return (
