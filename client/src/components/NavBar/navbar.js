@@ -28,6 +28,7 @@ const Header = () => {
           <Nav className="mr-auto">
             <Nav.Link href="#features">Features</Nav.Link>
             <Nav.Link href="#pricing">Beer List</Nav.Link>
+            <Nav.Link href="#upload">Upload</Nav.Link>
             <NavDropdown title={currentUser.email} id="collasible-nav-dropdown">
               <NavDropdown.Item onClick={()=>history.push("/updateprofile")}>UpdateProfile</NavDropdown.Item>
               <NavDropdown.Item onClick={handleLogout}>
