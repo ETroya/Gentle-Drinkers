@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Gluejar from "react-gluejar";
-import "./NewBeer.css";
+import "./newBeer.css";
 import ImageButton from "./ImageButton";
 import Images from "./Image";
 import { Form, Button } from "react-bootstrap";
@@ -30,6 +30,11 @@ const NewBeer = () => {
     }
   };
 
+  const addBeer= ()=>{
+    console.log("button clicked")
+
+  }
+
   return (
     <div className="newBeer">
       <div className="newBeerForm  ">
@@ -53,7 +58,7 @@ const NewBeer = () => {
               <Form.Label>ABV%</Form.Label>
               <Form.Control type="number" />
             </Form.Group>
-            <Button>ADD BEER!</Button>
+            <Button onClick={()=>addBeer()}>ADD BEER!</Button>
           </Form>
         </div>
       </div>
@@ -62,3 +67,9 @@ const NewBeer = () => {
 };
 
 export default NewBeer;
+
+
+
+
+
+

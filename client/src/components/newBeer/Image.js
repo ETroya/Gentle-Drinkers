@@ -1,5 +1,5 @@
 import React from "react";
-import "./NewBeer.css";
+import "./newBeer.css";
 const Image = ({ images, removeImages }) => {
   console.log(images);
   return (
