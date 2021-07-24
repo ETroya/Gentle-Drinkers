@@ -1,18 +1,31 @@
 import React, { useState } from "react";
 import Gluejar from "react-gluejar";
-import "./NewBeer.css";
+import { Form, Button } from "react-bootstrap";
+
+import API from "../../utils/api";
+import "./newBeer.css";
 import ImageButton from "./ImageButton";
 import Images from "./Image";
-import { Form, Button } from "react-bootstrap";
 
 const NewBeer = () => {
   const [images, setImages] = useState([]);
+
+  const [beer, setBeer] = useState({
+    name: "",
+    type: "",
+    abv: "",
+  });
 
   const handleImageUpload = (e) => {
     const [file] = e.target.files;
     if (file) {
       console.log(file);
     }
+  };
+
+  //Take the input from the new beer form and saves each change to state
+  const handleChange = (e) => {
+    setBeer({ ...beer, [e.target.name]: e.target.value });
   };
 
   const removeImages = (id) => {
@@ -30,30 +43,55 @@ const NewBeer = () => {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    API.addBeer(beer).then((res) => {
+      console.log("====================================");
+      console.log(res);
+      console.log("====================================");
+    });
+  };
+
   return (
     <div className="newBeer">
       <div className="newBeerForm  ">
         <div className="addBeer">
           <h2 className="text-center">Add new beer</h2>
           {getImageContent()}
-          <Form>
+          <Form onSubmit={(e) => handleSubmit(e)}>
             <Form.Group>
               <Form.Label>Beer Name</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control
+                type="text"
+                name="name"
+                onChange={(e) => handleChange(e)}
+                required
+              />
             </Form.Group>
             <Form.Group>
               <Form.Label>Beer Type</Form.Label>
-              <Form.Control as="select">
-                <option>Ale</option>
-                <option>Stout</option>
-                <option>IPA</option>
+              <Form.Control
+                as="select"
+                name="type"
+                onChange={(e) => handleChange(e)}
+                required
+              >
+                <option>Type of beer</option>
+                <option value="Ale">Ale</option>
+                <option value="Stout">Stout</option>
+                <option value="IPA">IPA</option>
               </Form.Control>
             </Form.Group>
             <Form.Group>
               <Form.Label>ABV%</Form.Label>
-              <Form.Control type="number" />
+              <Form.Control
+                type="number"
+                name="abv"
+                onChange={(e) => handleChange(e)}
+                required
+              />
             </Form.Group>
-            <Button>ADD BEER!</Button>
+            <Button type="submit">ADD BEER!</Button>
           </Form>
         </div>
       </div>

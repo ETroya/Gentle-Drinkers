@@ -8,21 +8,21 @@ import List from "../List/index";
 function Beerlist() {
   const [filteredBeers, setFilterBeer] = useState([]);
 
-  useEffect(() => {
-    api.getBeer().then((allBeers) => {
-      const totalBeers = allBeers.data.map((result) => {
-        let beer = {
-          beerName: result.name,
-          brewery: result.brewery,
-          flavorNotes: result.flavor,
-          abv: result.percent,
-          range: result.range,
-        };
-        return beer;
-      });
-      setFilterBeer(totalBeers);
-    });
-  }, []);
+  // useEffect(() => {
+  //   api.getBeer().then((allBeers) => {
+  //     const totalBeers = allBeers.data.map((result) => {
+  //       let beer = {
+  //         beerName: result.name,
+  //         brewery: result.brewery,
+  //         flavorNotes: result.flavor,
+  //         abv: result.percent,
+  //         range: result.range,
+  //       };
+  //       return beer;
+  //     });
+  //     setFilterBeer(totalBeers);
+  //   });
+  // }, []);
 
   return (
     <div>
