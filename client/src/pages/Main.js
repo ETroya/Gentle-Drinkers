@@ -5,6 +5,7 @@ import RandomBeer from "../components/RandomBeer/randomBeer";
 import FeaturedBeer from "../components/featuredBeer/FeaturedBeer";
 import Header from "../components/NavBar/navbar";
 import Beerlist from "../components/Beerlist/beerList";
+import Inputbeer from "../components/InputBeer/Inputbeer";
 import Questionnaire from "../components/questionnaire/Questionnaire";
 
 const Main = () => {
@@ -18,9 +19,11 @@ const Main = () => {
         <Questionnaire />
       </div>
       <div className="featuredCard">
+        <Inputbeer />
+      </div>
+      <div className="featuredCard">
         <FeaturedBeer />
       </div>
-
       <div className="beerList">
         <Beerlist />
       </div>
