@@ -1,28 +1,63 @@
-.newBeerForm {
+/**NewBeer.js*/
+
+.beer-button {
+  border-style: none;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin-top: 1em;
+  width: 100%;
+  color: white;
+}
+
+.close-newBeer {
+  position: absolute;
+  top: 4.5px;
+  left: 96%;
+  transition: transform 500ms ease;
+}
+
+.close-newBeer:hover {
+  cursor: pointer;
+  transform: scale(2) perspective(1px);
+}
+
+.label {
+  margin-top: 0.5em;
+}
+
+.newBeer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  width: 30%;
+  background-color: salmon;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 3em; */
-  /* margin: 5em; */
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.addBeer {
-  /* padding: 2em; */
-  width: 80%;
-  margin-top: 3em;
-  border-radius: 20px;
+.newBeer-content {
+  width: 70%;
 }
 
-.imageInput {
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+/**ImageButton.js*/
 
 .fileInput {
   display: none;
+}
+
+.image {
+  width: 200px;
+  height: 300px;
+  position: absolute;
 }
 
 .imageDiv {
@@ -34,17 +69,56 @@
   align-items: center;
 }
 
-.image {
-  width: 200px;
-  height: 300px;
+.imageDiv:hover {
+  cursor: pointer;
+}
+
+.imageInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/**Image.js*/
+
+.delete {
+  display: none;
   position: absolute;
+
+  transition: transform 500ms ease;
 }
 
 .sideBar {
   background-color: greenyellow;
 }
 
-.uploadedImage {
+#uploadedImage {
   width: 200px;
   height: 300px;
+  z-index: 1;
+  transition: opacity 500ms ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.uploadedImageDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: auto;
+}
+
+#uploadedImage:hover {
+  opacity: 0.33;
+  cursor: pointer;
+}
+.uploadedImageDiv:hover .delete {
+  display: block;
+  transform: scale(4) perspective(1px);
+}
+
+.uploadedImageDiv:active .delete {
+  display: block;
+  transform: scale(1) perspective(1px);
 }

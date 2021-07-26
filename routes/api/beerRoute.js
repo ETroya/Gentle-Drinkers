@@ -5,22 +5,18 @@ const router = express.Router();
 const Beer = require("../../models/beerSchema");
 
 router.post("/addBeers", async (req, res) => {
-  const { name, type, abv } = req.body;
+  const { name, type, abv, image } = req.body;
 
   try {
     const newBeer = new Beer({
       name,
       type,
       abv,
-      image: "https://via.placeholder.com/150",
+      image,
       createdBy: "test user",
     });
 
     await newBeer.save();
-
-    console.log("====================================");
-    console.log(newBeer);
-    console.log("====================================");
 
     res.json(newBeer);
   } catch (error) {

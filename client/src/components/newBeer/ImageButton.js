@@ -1,24 +1,29 @@
 import React from "react";
 
-const ImageButton = () => {
+const ImageButton = ({ setImages, setImageSelected }) => {
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
 
   const handleImageUpload = (e) => {
     const [file] = e.target.files;
+
     if (file) {
       const reader = new FileReader();
       const { current } = uploadedImage;
       current.file = file;
       reader.onload = (e) => {
         current.src = e.target.result;
+        setImageSelected(e.target.result);
       };
+
       reader.readAsDataURL(file);
+
+      setImages(true);
     }
   };
 
   return (
-    <div className="imageInput container">
+    <div className="imageInput">
       <input
         className="fileInput"
         type="file"
