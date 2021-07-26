@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
+import { GoTrashcan } from "react-icons/go";
+
 import "./newBeer.css";
 const Image = ({ images, removeImages }) => {
-  console.log(images);
   return (
-    <div>
-      {/* {images.map((image, i) => {
-                console.log(image.name);
-                <div key={i} className='fadein'>
-                    <div onClick={() => removeImages(image.lastModified)}
-                    className='delete'>
-                        X
-                    </div>
-                    <img src={image.name} alt=''/>
-                    </div>
-            })} */}
-      <img src={images[0].name} alt="" id="uploadedImage" />
+    <div className="image-container">
+      <div className="uploadedImageDiv">
+        <p onClick={() => removeImages(images.lastModified)} className="delete">
+          <GoTrashcan />
+        </p>
+        <div className="image-div">
+          <img
+            src={images}
+            alt=""
+            id="uploadedImage"
+            onClick={removeImages}
+          ></img>
+        </div>
+      </div>
     </div>
   );
 };

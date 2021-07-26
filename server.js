@@ -13,22 +13,16 @@ app.use(express.json());
 
 // We need to use sessions to keep track of our user's login status
 // app.use(
-//     session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-//   );
+//   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+// );
 //   app.use(passport.initialize());
 // app.use(passport.session());
 
-// Add routes, both API and view
-// app.use(routes);
+// routes
+const routes = require("./routes");
+app.use(routes);
 
 mongoose.connect(
-  // process.env.MONGODB_URI || "mongodb://localhost/adminEmployee",
-  // {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  //   useCreateIndex: true,
-  //   useFindAndModify: false,
-  // }
   process.env.MONGODB_URI || "mongodb://localhost/drinkersList",
   {
     useNewUrlParser: true,

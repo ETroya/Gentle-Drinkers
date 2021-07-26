@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-    getBeer: function() {
-        return axios.get("/api/beers");
-    }
-}
+  addBeer: (data) => {
+    return axios.post("/api/beer/addBeers", data);
+  },
+};
