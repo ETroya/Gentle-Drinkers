@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { GoTrashcan } from "react-icons/go";
 
-import "./newBeer.css";
+import "./NewBeer.css";
 const Image = ({ images, removeImages }) => {
   return (
     <div className="image-container">

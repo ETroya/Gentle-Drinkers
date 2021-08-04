@@ -4,7 +4,7 @@ import { Form, Alert } from "react-bootstrap";
 import Axios from "axios";
 
 import API from "../../utils/api";
-import "./newBeer.css";
+import "./NewBeer.css";
 import ImageButton from "./ImageButton";
 import Images from "./Image";
 
