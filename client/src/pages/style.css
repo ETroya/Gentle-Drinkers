@@ -4,11 +4,15 @@
 }
 
 .randomCard {
-    margin-top: 5em;
+    margin: 5em 3em;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .featuredCard {
-    margin-top: 5em;
+    margin: 5em 3em;
+    /* display: flex; */
+    /* justify-content: flex-end; */
 }
 
 .questions{

@@ -37,16 +37,14 @@ const Main = () => {
       <div>
         <Header addBeer={addBeer} setAddBeer={setAddBeer} />
         <div className="randomCard">
-          {loading ? <div>Is loading...</div> : <RandomBeer beers={beers} />}
+          {loading ? <div></div> : <RandomBeer beers={beers} />}
         </div>
         <div>
           <Questionnaire />
         </div>
+
         <div className="featuredCard">
-          <Inputbeer />
-        </div>
-        <div className="featuredCard">
-          <FeaturedBeer />
+          {loading ? <div></div> : <FeaturedBeer beers={beers} />}
         </div>
         <div className="beerList">
           <Beerlist />

@@ -1,10 +1,20 @@
-.featuredBeer {
-    text-align: center;
-    padding: 90px 0;
+.beerCard{
+    display: flex;
+    justify-content: left;
+    align-items: center;
     width: 65%;
-    margin-right: auto;
-}
-
-.beerName {
-    font-size: 1.5em;
-}
+    }
+    
+    .beerName {
+        font-size: 1.5em;
+    }
+    
+    .randomBeer {
+        text-align: center;
+    }
+    
+    .randomBeerImage{
+        height: 50vh;
+        width: 100%;
+    }
+    
