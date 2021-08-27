@@ -9,62 +9,66 @@ import PrivateRoute from "./components/PrivateRoutes/PrivateRoutes";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import AddBeer from "./pages/AddBeer";
+import { StateProvider } from "./utils/GlobalState";
 
 function App() {
+  
   return (
     <AuthProvider>
-      <Router>
-        <div>
-          <PrivateRoute exact path={"/"} component={Main} />
-          <Route exact path={"/addbeer"}>
-            <AddBeer />
-          </Route>
-          <PrivateRoute
-            exact
-            path={"/updateprofile"}
-            component={UpdateProfile}
-          />
-          <Route exact path={"/signup"}>
-            <Container
-              className="d-flex algin-items-center justify-content-center mt-5"
-              style={{ minHeight: "100vh" }}
-            >
-              <div
-                className="w-100 text-secondary"
-                style={{ maxWidth: "400px" }}
+      <StateProvider>
+        <Router>
+          <div>
+            <PrivateRoute exact path={"/"} component={Main} />
+            <Route exact path={"/addbeer"}>
+              <AddBeer />
+            </Route>
+            <PrivateRoute
+              exact
+              path={"/updateprofile"}
+              component={UpdateProfile}
+            />
+            <Route exact path={"/signup"}>
+              <Container
+                className="d-flex algin-items-center justify-content-center mt-5"
+                style={{ minHeight: "100vh" }}
               >
-                <Signup />
-              </div>
-            </Container>
-          </Route>
-          <Route exact path={"/login"}>
-            <Container
-              className="d-flex algin-items-center justify-content-center mt-5"
-              style={{ minHeight: "100vh" }}
-            >
-              <div
-                className="w-100 text-secondary"
-                style={{ maxWidth: "400px" }}
+                <div
+                  className="w-100 text-secondary"
+                  style={{ maxWidth: "400px" }}
+                >
+                  <Signup />
+                </div>
+              </Container>
+            </Route>
+            <Route exact path={"/login"}>
+              <Container
+                className="d-flex algin-items-center justify-content-center mt-5"
+                style={{ minHeight: "100vh" }}
               >
-                <Login />
-              </div>
-            </Container>
-          </Route>
-          <Route exact path={"/forgot-password"}>
-            <Container
-              className="d-flex algin-items-center justify-content-center mt-5"
-              style={{ minHeight: "100vh" }}
-            >
-              <div
-                className="w-100 text-secondary"
-                style={{ maxWidth: "400px" }}
+                <div
+                  className="w-100 text-secondary"
+                  style={{ maxWidth: "400px" }}
+                >
+                  <Login />
+                </div>
+              </Container>
+            </Route>
+            <Route exact path={"/forgot-password"}>
+              <Container
+                className="d-flex algin-items-center justify-content-center mt-5"
+                style={{ minHeight: "100vh" }}
               >
-                <ForgotPassword />
-              </div>
-            </Container>
-          </Route>
-        </div>
-      </Router>
+                <div
+                  className="w-100 text-secondary"
+                  style={{ maxWidth: "400px" }}
+                >
+                  <ForgotPassword />
+                </div>
+              </Container>
+            </Route>
+          </div>
+        </Router>
+      </StateProvider>
     </AuthProvider>
   );
 }

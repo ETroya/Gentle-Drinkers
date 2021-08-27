@@ -27,4 +27,19 @@ router.post("/addBeers", async (req, res) => {
   }
 });
 
+router.get("/getBeers", async (req, res) => {
+  try {
+    const beers = await Beer.find({});
+    console.log("inside peanut butter");
+    res.json(beers);
+  } catch (error) {
+    console.log("====================================");
+    console.log("[DANGER WIL ROBINSON]");
+    console.log("====================================");
+    console.log("====================================");
+    console.log(ERROR);
+    console.log("====================================");
+  }
+});
+
 module.exports = router;

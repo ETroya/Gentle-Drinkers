@@ -1,11 +1,20 @@
-.randomBeer {
-    text-align: center;
-    padding: 90px 0;
-    width: 65%;
-    margin-left: auto;
+.beerCard{
+display: flex;
+justify-content: left;
+align-items: center;
+width: 65%;
 }
 
 .beerName {
     font-size: 1.5em;
+}
+
+.randomBeer {
+    text-align: center;
+}
+
+.randomBeerImage{
+    height: 50vh;
+    width: 100%;
 }
 
