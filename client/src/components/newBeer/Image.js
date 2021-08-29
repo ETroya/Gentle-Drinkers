@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { GoTrashcan } from "react-icons/go";
 
 import "./newBeer.css";
-const Image = ({ images, removeImages }) => {
+const Image = ({ images, removeImages, attribute, setAttribute }) => {
   return (
-    <div className="image-container">
+    <div className={attribute}>
       <div className="uploadedImageDiv">
         <p onClick={() => removeImages(images.lastModified)} className="delete">
           <GoTrashcan />

@@ -34,23 +34,41 @@ const Main = () => {
   return (
     <>
       {addBeer ? <NewBeer setAddBeer={setAddBeer} /> : null}
-      <div>
+      <header className="row header-container">
         <Header addBeer={addBeer} setAddBeer={setAddBeer} />
-        <div className="randomCard">
-          {loading ? <div></div> : <RandomBeer beers={beers} />}
+        <div className="intro">
+          This area will hold introductory information
         </div>
-        <div>
+      </header>
+      <div className="row">
+        <div className="col-md-4">
           <Questionnaire />
+          <div className="add-card">
+            {" "}
+            This is where the add beer card will be
+          </div>
         </div>
+        <div className="col-md-4 message-board">
+          this is where the message board will go
+        </div>
+        <div className="col-md-4 ">
+          <div className="beerCards">
+            <div className="randomCard">
+              {loading ? <div></div> : <RandomBeer beers={beers} />}
+            </div>
 
-        <div className="featuredCard">
-          {loading ? <div></div> : <FeaturedBeer beers={beers} />}
+            <div className="randomCard">
+              {loading ? <div></div> : <RandomBeer beers={beers} />}
+            </div>
+          </div>
         </div>
-        <div className="beerList">
-          <Beerlist />
-        </div>
-        <Footer />
       </div>
+      <div className="row">
+        <div className="map mt-5 mb-2">this is where the map will go</div>
+      </div>
+      <footer className="row footer">
+        <Footer />
+      </footer>
     </>
   );
 };

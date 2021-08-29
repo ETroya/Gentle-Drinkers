@@ -1,18 +1,60 @@
+.add-card{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed cornsilk;
+    height: 9.54em;
+}
+
+.beerCards {
+    border: 2px dashed cornsilk;
+    padding-left: 5px;
+}
+
 .main {
     background-color: rgb(24, 26, 27);
     color: white;
 }
 
 .randomCard {
-    margin: 5em 3em;
-    display: flex;
-    justify-content: flex-end;
+
+display: flex;
+margin: 3em;
+justify-content: center;
+border: 2px dashed cornsilk
 }
 
-.featuredCard {
+/* .featuredCard {
     margin: 5em 3em;
-    /* display: flex; */
-    /* justify-content: flex-end; */
+
+} */
+
+.header-container{
+    height: 400px;
+}
+
+.intro{
+    height: 65%;
+    display: flex;
+    align-items: center;
+border-bottom: 5px dashed cornsilk;
+}
+
+.map{
+
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed cornsilk;
+
+}
+
+.message-board{
+text-align: center;
+border: 2px dashed cornsilk;
+
 }
 
 .questions{

@@ -73,6 +73,10 @@
   cursor: pointer;
 }
 
+/* .imageDiv:active{
+  pointer-events: none;
+} */
+
 .imageInput {
   display: flex;
   align-items: center;
@@ -87,6 +91,10 @@
   position: absolute;
 
   transition: transform 500ms ease;
+}
+
+.disabled{
+  pointer-events: none;
 }
 
 .sideBar {
@@ -113,12 +121,19 @@
   opacity: 0.33;
   cursor: pointer;
 }
+
+
+
 .uploadedImageDiv:hover .delete {
   display: block;
   transform: scale(4) perspective(1px);
 }
 
-.uploadedImageDiv:active .delete {
+.uploadedImageDiv:hover .disabled {
+  pointer-events: all;
+}
+
+/* .uploadedImageDiv:active .delete {
   display: block;
   transform: scale(1) perspective(1px);
-}
+} */

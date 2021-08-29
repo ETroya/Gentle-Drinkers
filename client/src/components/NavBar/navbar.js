@@ -21,7 +21,7 @@ const Header = ({ setAddBeer, addBeer }) => {
 
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" variant="dark">
         <Navbar.Brand id="title" href="#home">
           Gentle-Drinkers
         </Navbar.Brand>

@@ -1,8 +1,9 @@
 .beerCard{
-display: flex;
-justify-content: left;
-align-items: center;
-width: 65%;
+
+background-size: cover;
+padding: 8rem 0 0;
+width: 100%;
+border-radius: 5px;
 }
 
 .beerName {
@@ -10,11 +11,16 @@ width: 65%;
 }
 
 .randomBeer {
+
     text-align: center;
+
 }
 
-.randomBeerImage{
-    height: 50vh;
+/* .randomBeerImage{
+
+    height: 100%;
     width: 100%;
-}
+    left: 0%;
+    right: 20%;
+} */
 

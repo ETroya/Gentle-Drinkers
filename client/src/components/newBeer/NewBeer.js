@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Gluejar from "react-gluejar";
 import { Form, Alert } from "react-bootstrap";
 import Axios from "axios";
@@ -12,13 +12,16 @@ const NewBeer = ({ setAddBeer }) => {
   const [error, setError] = useState("");
   const [images, setImages] = useState(false);
   const [imageSelected, setImageSelected] = useState("");
+  const [attribute, setAttribute] = useState("");
   const [beer, setBeer] = useState({
     name: "",
     type: "",
     abv: "",
     image: "",
   });
-  console.log(beer);
+
+  const beerNameRef = useRef();
+
   const handleImageUpload = (e) => {
     const [file] = e.target.files;
     if (file) {
@@ -39,7 +42,16 @@ const NewBeer = ({ setAddBeer }) => {
   //Either gets the upload button or if image is uploaded, gets image
   const getImageContent = () => {
     if (images) {
-      return <Images images={imageSelected} removeImages={removeImages} />;
+      beerNameRef.current.focus();
+
+      return (
+        <Images
+          images={imageSelected}
+          attribute={attribute}
+          removeImages={removeImages}
+          setAttribute={setAttribute}
+        />
+      );
     } else {
       return (
         <ImageButton
@@ -98,6 +110,7 @@ const NewBeer = ({ setAddBeer }) => {
           <Form.Group>
             <Form.Label className="label">Beer Name</Form.Label>
             <Form.Control
+              ref={beerNameRef}
               type="text"
               name="name"
               onChange={(e) => handleChange(e)}
@@ -114,6 +127,7 @@ const NewBeer = ({ setAddBeer }) => {
               <option value="Ale">Ale</option>
               <option value="Stout">Stout</option>
               <option value="IPA">IPA</option>
+              <option value="Import Pale Lager">Import Pale Lager</option>
             </Form.Control>
           </Form.Group>
           <Form.Group>
