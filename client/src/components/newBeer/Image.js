@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { GoTrashcan } from "react-icons/go";
 
-import "./newBeer.css";
+
+import "./NewBeer.css";
 const Image = ({ images, removeImages, attribute, setAttribute }) => {
+
   return (
     <div className={attribute}>
       <div className="uploadedImageDiv">
