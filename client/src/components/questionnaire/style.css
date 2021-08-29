@@ -30,3 +30,8 @@
   cursor: pointer; /* Cursor on hover */
   border-radius: 50%;
 }
+
+.mainContent{
+  border: 2px dashed cornsilk;
+  height: 75%;
+}
